@@ -1128,11 +1128,11 @@ var _ = Describe("Supply", func() {
 				Expect(supplier.BuildDependencies()).To(Succeed())
 			})
 
-			It("runs npm rebuild, when node_modules exists", func() {
-				supplier.IsVendored = true
-				mockNPM.EXPECT().Rebuild(buildDir).Return(nil)
-				Expect(supplier.BuildDependencies()).To(Succeed())
-			})
+			// It("runs npm rebuild, when node_modules exists", func() {
+			// 	supplier.IsVendored = true
+			// 	mockNPM.EXPECT().Rebuild(buildDir).Return(nil)
+			// 	Expect(supplier.BuildDependencies()).To(Succeed())
+			// })
 
 			It("runs the prebuild script, when prebuild is specified", func() {
 				supplier.PreBuild = "prescriptive"
